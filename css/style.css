@@ -855,6 +855,7 @@ h2 {
         margin-bottom: 42px;
         min-height: 392px;
         background-image: url("../images/banner-bg-tablet.jpg");
+        background-position:   center 90%;
     }
 
 
@@ -988,6 +989,7 @@ h2 {
     .header {
         min-height: 638px;
         background-image: url("../images/banner-mobile.jpg");
+        background-position:   center 60%;
     }
 
     .burger-menu {
