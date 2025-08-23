@@ -16,6 +16,25 @@
     font-display: swap;
 }
 
+
+:root {
+    --dijon-color: #b59f5b;
+
+    --base_font: 0.875rem;
+    --small_font: 0.75rem;
+
+    --limit: 1200px;
+
+
+
+
+
+    /* --blue-color: #4443d0;
+  --rocket-color: #ef5b31; */
+}
+
+
+
 html {
     display: flex;
     font-size: 16px;
@@ -31,12 +50,12 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: black;
     transition: 0.2s;
 }
 
 a:hover {
-    color: #b59f5b;
+    color: var(--dijon-color);
 }
 
 li {
@@ -72,7 +91,7 @@ li {
 
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: var(--limit);
     margin: 0 auto;
     padding: 28px 15px;
 }
@@ -121,13 +140,13 @@ li {
     position: relative;
     display: block;
 
-    font-size: 0.8rem;
+    font-size: 0.813rem;     /* 13 px */
     text-transform: uppercase;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 .link:hover {
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 .link::before {
@@ -136,7 +155,7 @@ li {
 
     width: 0%;
     bottom: 0px;
-    border-bottom: solid 1px rgb(255, 255, 255);
+    border-bottom: solid 1px white;
     transition: width 0.2s;
 }
 
@@ -149,14 +168,14 @@ li {
     z-index: 2;
 
     display: block;
-    max-width: 1200px;
+    max-width: var(--limit);
     margin: 62px auto 0;
 
     text-transform: uppercase;
 }
 
 h1 {
-    max-width: 710px;
+    max-width: 700px;
     margin: auto;
     padding: 14px;
 
@@ -164,7 +183,7 @@ h1 {
     font-size: 2.8rem;
     line-height: 1.68;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 h2 {
@@ -179,7 +198,7 @@ h2 {
     align-items: flex-start;
     justify-content: space-between;
 
-    max-width: 1200px;
+    max-width: var(--limit);
     padding: 64px 15px 0;
     margin: 0 auto;
 }
@@ -206,7 +225,7 @@ h2 {
 
 .trend-container {
     position: relative;
-    
+
     display: flex;
     flex-direction: column;
     padding: 16px 20px;
@@ -232,9 +251,8 @@ h2 {
     padding: 36px;
 
     text-align: left;
-    color: #ffffff;
+    color: white;
     border: rgba(181, 159, 91, 0.6) solid 3px;
-
 }
 
 .trend-theme {
@@ -245,7 +263,6 @@ h2 {
     line-height: 120%;
     text-transform: uppercase;
 }
-
 
 .theme-garden {
     background-image: url('../images/trend1.jpg');
@@ -266,7 +283,7 @@ h2 {
 .main-content {
     position: relative;
     display: block;
-    width: 66.5%;
+    width: 66.6%;    /* 8/12 */
 }
 
 .post-preview {
@@ -299,10 +316,10 @@ h2 {
 
     display: block;
 
-    font-size: 0.88rem;
+    font-size: var(--base_font);
     font-weight: 800;
     text-transform: uppercase;
-    color: #b59f5b;
+    color: var(--dijon-color);
 }
 
 .post-theme {
@@ -323,13 +340,13 @@ h2 {
 }
 
 .post-time {
-    font-size: 0.75rem;
+    font-size: var(--small_font);
     color: #7e7e7e;
 }
 
 .author {
     margin-left: 8px;
-    font-size: 0.75rem;
+    font-size: var(--small_font);
     font-weight: 600;
 }
 
@@ -344,11 +361,8 @@ h2 {
 }
 
 
-
-
-
 .sidebar {
-    width: 23.25%;
+    width: 25%;   /* 3/12 */
 }
 
 .sidebar-section {
@@ -363,7 +377,7 @@ h2 {
     margin-bottom: 36px;
 
     text-align: center;
-    font-size: 0.9rem;
+    font-size: var(--base_font);
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -397,7 +411,7 @@ h2 {
 
 .post-thumb {
     position: relative;
-    width: 26%;
+    width: 25%;
 }
 
 .post-image {
@@ -408,14 +422,14 @@ h2 {
 .desc-post-item {
     position: relative;
 
-    width: 67%;
+    width: 66.6%;    /* 8 / 12  */
     top: -6px;
 }
 
 .new-post-link {
     display: block;
 
-    font-size: 0.9rem;
+    font-size: var(--base_font);
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -424,27 +438,26 @@ h2 {
     height: 48px;
     padding: 14px 18px;
 
-    font-size: 0.8rem;
+    font-size: 0.813rem;
     color: #7e7e7e;
     border: 0;
     background-color: #f4f7f6;
 }
 
 .field:focus {
-    outline: 1px solid #b59f5b;
+    outline: 1px solid var(--dijon-color);
     outline-offset: -1px;
 }
 
 .button {
     height: 48px;
-    font-size: 0.9rem;
+    font-size: var(--base_font);
     text-transform: uppercase;
-    color: #ffffff;
+    color: white;
 
-    background-color: #b59f5b;
+    background-color: var(--dijon-color);
     border: 0;
     cursor: pointer;
-
 }
 
 .button:hover {
@@ -490,7 +503,7 @@ h2 {
     padding: 4px 13px;
     margin: 0 8px 8px 0;
 
-    font-size: 0.75rem;
+    font-size: var(--small_font);
     font-weight: 600;
     text-transform: uppercase;
 
@@ -500,7 +513,7 @@ h2 {
 
 .tag-link:hover {
     color: #0f0d0e;
-    border-color: #b59f5b;
+    border-color: var(--dijon-color);
 }
 
 .theme-title {
@@ -512,7 +525,7 @@ h2 {
     flex-direction: column;
     width: 100%;
 
-    font-size: 0.9rem;
+    font-size: var(--base_font);
     font-weight: 600;
     list-style: none;
     color: #0f0d0e;
@@ -523,7 +536,7 @@ h2 {
 
     padding-bottom: 12px;
     margin-bottom: 15px;
-    border-bottom: 1px solid #b59f5b;
+    border-bottom: 1px solid var(--dijon-color);
 }
 
 .theme-link {
@@ -538,16 +551,14 @@ h2 {
     right: -25px;
 
     width: 20px;
-    font-size: 0.75rem;
+    font-size: var(--small_font);
     text-align: left;
-    color: #b59f5b;
+    color: var(--dijon-color);
 }
-
-
 
 .footer {
     position: relative;
-    max-width: 1200px;
+    max-width: var(--limit);
 
     display: flex;
     flex-direction: column;
@@ -613,7 +624,7 @@ h2 {
 
 .copyright {
 
-    font-size: 0.75rem;
+    font-size: var(--small_font);
     color: #999999;
     cursor: pointer;
 }
@@ -622,10 +633,6 @@ h2 {
     color: #999999;
 }
 
-
-
-
-
 .our-products-wrp {
     flex: 1 1 100%;
 
@@ -633,13 +640,12 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-between;
 
-    max-width: 1200px;
+    max-width: var(--limit);
     min-height: 100px;
     height: auto;
     padding: 0;
     margin: 40px auto 60px;
 }
-
 
 .our-product {
     display: flex;
@@ -653,6 +659,7 @@ h2 {
 .our-product-img {
     width: 88%;
     margin-bottom: -34px;
+
 }
 
 .our-product-content {
@@ -669,7 +676,7 @@ h2 {
 }
 
 .video {
-    color: rgb(181, 159, 91);
+    color: var(--dijon-color);
 }
 
 .video:hover {
@@ -685,14 +692,13 @@ h2 {
 .price {
     position: relative;
 
-    width: 30%;
+    width: 33.3%;  /*  4 / 12  */
     margin-right: auto;
     padding-top: 13px;
 
     font-size: 1.25rem;
     font-weight: 600;
 }
-
 
 .price::before {
     content: attr(data-info);
@@ -704,7 +710,7 @@ h2 {
     width: 100%;
     height: 100%;
 
-    font-size: 0.9rem;
+    font-size: var(--base_font);
     text-decoration: line-through;
 }
 
@@ -724,7 +730,6 @@ h2 {
     padding: 9vh 15px 15px;
 
     background-color: rgba(0, 0, 0, 0.7);
-
 }
 
 .hidden {
@@ -752,7 +757,6 @@ h2 {
     font-size: 13px;
 }
 
-
 .selector {
     width: 100%;
     height: 46px;
@@ -763,7 +767,7 @@ h2 {
     appearance: none;
 
     border: none;
-    outline: 3px #ab8101;
+    outline: 3px var(--dijon-color);
     background-image: url("/svg/form-arrows.svg");
     background-repeat: no-repeat;
     background-size: 10px;
@@ -808,8 +812,6 @@ h2 {
     background-size: 16px;
 }
 
-
-
 .opt:checked+.opt-label::before {
     background-image: url("../svg/form-circle.svg");
 }
@@ -822,9 +824,6 @@ h2 {
     margin: 10px auto 6px;
     background-color: #f4f7f6;
 }
-
-
-
 
 .close-form {
     position: absolute;
@@ -844,7 +843,6 @@ h2 {
 }
 
 
-
 @media screen and (max-width: 1200px) {
 
     h2 {
@@ -855,15 +853,12 @@ h2 {
         margin-bottom: 42px;
         min-height: 392px;
         background-image: url("../images/banner-bg-tablet.jpg");
-        background-position:   center 90%;
+        background-position: center 90%;
     }
-
 
     .burger-menu {
         display: block;
     }
-
-
 
     .header-content {
         align-items: center;
@@ -876,19 +871,16 @@ h2 {
     }
 
     .header-title {
-        max-width: 660px;
         margin: 30px auto 0;
     }
 
     h1 {
-        max-width: 710px;
+        max-width: 640px;
         margin: auto;
         padding: 14px;
         font-size: 2.5rem;
         line-height: 1.375;
     }
-
-
 
     .nav-links {
         display: none;
@@ -937,12 +929,10 @@ h2 {
         border-bottom: none;
     }
 
-
     .post-content,
     .post-picture {
         width: 100%;
     }
-
 
     .our-product {
         flex-grow: 0;
@@ -956,7 +946,7 @@ h2 {
 
     .popup {
         padding-top: 50px;
-        background-color: #ffffff;
+        background-color: white;
     }
 
     .opt-group {
@@ -980,7 +970,6 @@ h2 {
         background-size: 28px;
     }
 
-
 }
 
 
@@ -989,7 +978,7 @@ h2 {
     .header {
         min-height: 638px;
         background-image: url("../images/banner-mobile.jpg");
-        background-position:   center 60%;
+        background-position: center 60%;
     }
 
     .burger-menu {
@@ -1020,7 +1009,9 @@ h2 {
     }
 
     h1 {
+        max-width: 360px;
         font-size: 1.625rem;
+        /* 26px */
     }
 
     h2 {
@@ -1184,6 +1175,6 @@ h2 {
             height: 18px;
             background-size: 18px;
         }
-        
+
     }
 }
